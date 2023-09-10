@@ -1,2 +1,2 @@
 # Kaggle Titanic Challenge
-Reto para resolver el Challenge de Titanic en Kaggle: kaggle-titanic-challenge.streamlit.app
+Reto para resolver el Challenge de Titanic en Kaggle: https://kaggle-titanic-challenge.streamlit.app/

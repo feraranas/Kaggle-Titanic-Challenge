@@ -120,7 +120,7 @@ Para los valores numéricos usamos:
 Para los valores categóricos usamos:
 <br><br>
 ```"imputer_cat = SimpleImputer(strategy="most_frequent")```
-<br>
+<br><br>
 Usamos la mediana porque es una medida de tendencia central robusta que no se ve afectada por valores extremos o atípicos. En el caso de "Age", podría haber valores atípicos que afecten la media, es por eso que la mediana fue nuestra elección más robusta para imputar los valores faltantes.
 
 Observamos que la distribución de "Age" es asimétrica pero *NO* contiene valores atípicos significativos. Aun así, creímos preferible utilizar la mediana para evitar la influencia de estos valores atípicos en la imputación. Además, dicha asimetría no es muy significativa, dado que la desviación estándar es de 14. A continuación presentamos una gráfica que refleja la distribución de esta categoria numérica:

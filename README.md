@@ -208,10 +208,10 @@ Usamos los siguientes 4 modelos de clasificación:
 
 | <h4>Modelo</h4> | <h4>Breve descripción</h4> |
 | ---|---|
-| <h6>Logistic Regression</h6> | <h6></h6> |
-| <h6>K Nearest Neighbors</h6> | <h6></h6> |
-| <h6>Support Vector Machine</h6> | <h6></h6> |
-| <h6>Random Forest Classifier</h6> | <h6></h6> |
+| <h6>Logistic Regression</h6> | <h6>Fue una elección sólida por el hecho de ser un problema de clasificación binaria. Nos proporcionó una interpretación sencilla de las relaciones entre las características y la variable objetivo. Fue útil para comprender mejor los factores que influyen en la supervivencia.</h6> |
+| <h6>K Nearest Neighbors</h6> | <h6>Fue una sorpresa que los datos no presentaran correlaciones fuertes en relación a la supervivencia. Es por ello que KNN fue efectivo cuando no se asumimos ninguna distribución específica en los datos. Nos ayudó a capturar relaciones no lineales. Además fue útil para observar si existen agrupamientos de pasajeros que sobrevivieron o no en el Titanic.</h6> |
+| <h6>Support Vector Machine</h6> | <h6>Fue adecuado para separar clases en espacios de alta dimensión y también resultó el más eficaz en la clasificación binaria. Demostró ser capaz de manejar de manera efectiva características no lineales. Además, como vimos, fue útil ya que existían fronteras de decisión complejas entre las clases.</h6> |
+| <h6>Random Forest Classifier</h6> | <h6>Es robusto y versátil. Nos ayudó a manejar características irrelevantes, manejar conjuntos de datos desequilibrados y nos proporcionó una buena estimación de la importancia de las características. Además, tiende a reducir el sobreajuste.</h6> |
 
 ### b. Train-test-validate split:
 
@@ -220,6 +220,45 @@ Usamos los siguientes 4 modelos de clasificación:
 ### c. Métricas de evaluación:
 
 - **Calcular la exactitud, precisión, matriz de confusión, curva ROC y AUC. Explicar cada una de estas métricas.**
+
+<h4>Logistic Regression</h4>
+
+| <h4>Métrica</h4> | <h4>Explicación</h4> |
+| ---|---|
+| <h5></h5> | <h5></h5> |
+| <h5></h5> | <h5></h5> |
+| <h5></h5> | <h5></h5> |
+| <h5></h5> | <h5></h5> |
+
+<h4>K Nearest Neighbors</h4>
+
+| <h4>Métrica</h4> | <h4>Explicación</h4> |
+| ---|---|
+| <h5></h5> | <h5></h5> |
+| <h5></h5> | <h5></h5> |
+| <h5></h5> | <h5></h5> |
+| <h5></h5> | <h5></h5> |
+
+<h4>Support Vector Machine</h4>
+
+| <h4>Métrica</h4> | <h4>Explicación</h4> |
+| ---|---|
+| <h5></h5> | <h5></h5> |
+| <h5></h5> | <h5></h5> |
+| <h5></h5> | <h5></h5> |
+| <h5></h5> | <h5></h5> |
+
+<h4>Random Forest Classifier</h4>
+
+| <h4>Métrica</h4> | <h4>Explicación</h4> |
+| ---|---|
+| <h5></h5> | <h5></h5> |
+| <h5></h5> | <h5></h5> |
+| <h5></h5> | <h5></h5> |
+| <h5></h5> | <h5></h5> |
+
 - **Con base en estas métricas, determinar el mejor clasificador y justificar la elección.**
+
+El mejor clasificador fue: **A**
 
 ![Titanic](./assets/titanic.png)

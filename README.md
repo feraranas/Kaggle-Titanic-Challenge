@@ -161,11 +161,41 @@ Con base en esta figura vemos que el rango de valores va de -1 a 1. *-1* indica 
 
 - **Convertir los datos categóricos en numéricos. Explorar diferentes métodos y seleccionar el más adecuado. Justificar la elección.**
 
+Para la transformación de los datos usamos el siguiente codificador:<br>
+```from sklearn.preprocessing import OneHotEncoder```
+```onehot = OneHotEncoder(handle_unknown="ignore")```
+
+La elección de codificación estuvo entre **OneHotEncoder** y **Codificación por enteros** (por ejemplo, [0, 1, 2]) para variables categóricas. Tomamos nuestra decisión basándonos en los modelos que ibamos a usar, concluímos que la mejor estrategia sería usar *OneHotEncoder*
+
+**1. Regresión Logística:**: Usualmente, la codificación one-hot es una mejor opción para la regresión logística. Esto se debe a que la regresión logística no asume ninguna relación ordinal inherente entre las categorías, y la codificación one-hot garantiza que cada categoría se trate como una característica binaria separada.
+
+**2. Clasificador de Bosque Aleatorio (Random Forest):**
+
+   - **Elección de Codificación:** Los bosques aleatorios pueden funcionar bien tanto con codificación one-hot como con codificación entera. Los bosques aleatorios son robustos y pueden manejar la codificación ordinal si hay un orden significativo. Sin embargo, si deseas evitar posibles interpretaciones erróneas de la ordinalidad, la codificación one-hot es una elección más segura. A menudo es más fácil comenzar con la codificación one-hot y ver si funciona bien para tu conjunto de datos específico.
+
+**3. Clasificador de Vecinos Más Cercanos (KNN):**
+
+   - **Elección de Codificación:** KNN es un algoritmo basado en la distancia y puede ser sensible a la elección de la codificación. En la mayoría de los casos, se recomienda la codificación one-hot para KNN porque trata cada categoría como una dimensión separada. Sin embargo, si tienes datos ordinales y estás seguro de la significatividad del orden, podrías experimentar con la codificación entera.
+
+**4. Clasificador de Máquinas de Soporte Vectorial (SVM):**
+
+   - **Elección de Codificación:** Las SVM pueden trabajar con codificación one-hot y codificación entera. Depende del kernel que elijas y la naturaleza de tus datos. Los kernels lineales suelen funcionar bien con la codificación one-hot, mientras que las funciones de kernel como la Función de Base Radial (RBF) pueden manejar ambos tipos de codificación. Nuevamente, la codificación one-hot es una elección más segura si tienes dudas.
+
+En resumen, la codificación one-hot es una opción segura y ampliamente utilizada para la mayoría de los algoritmos de aprendizaje automático, ya que garantiza que cada categoría se trate como una característica separada, dejando claro que no existe una relación ordinal inherente. Sin embargo, si tienes un conocimiento experto sólido que sugiere que la codificación entera es apropiada, puedes probarla y ver cómo se desempeña tu modelo. Siempre considera las características específicas de tus datos y experimenta con diferentes estrategias de codificación para determinar la mejor aproximación para tu problema.
+
 ## 2. Clasificación:
 
 ### a. Selección de clasificadores:
 
 - **Elegir tres algoritmos de clasificación que se utilizarán en el proyecto. Justificar la selección de cada algoritmo.**
+
+Usamos los siguientes 4 modelos de clasificación:<br>
+| <h4>Modelo</h4> | <h4>Breve descripción</h4> |
+| ---|---|
+| <h6>Logistic Regression</h6> | <h6></h6> |
+| <h6>K Nearest Neighbors</h6> | <h6></h6> |
+| <h6>Support Vector Machine</h6> | <h6></h6> |
+| <h6>Random Forest Classifier</h6> | <h6></h6> |
 
 ### b. Train-test-validate split:
 

@@ -252,9 +252,9 @@ Usamos los siguientes 4 modelos de clasificación:
 
 | <h4>Métrica</h4> | <h4>Resultado </h4> | <h4>Explicación</h4> |
 | ---|---|---|
-| <h5>Precisión</h5> | <h4>0 -> 0.94, 1 -> 0.95</h4> | <h6>El modelo de Random Forest tiene una alta precisión tanto para la clase 0 (No sobrevivió) como para la clase 1 (Sobrevivió). Esto significa que cuando el modelo predice que un pasajero no sobrevivió, acierta aproximadamente el 94% de las veces, y cuando predice que un pasajero sobrevivió, acierta aproximadamente el 95% de las veces.</h6> |
-| <h5>Recall</h5> | <h4>0 -> 0.97, 1 -> 0.90</h4> | <h6>En este caso, el modelo tiene un recall excepcionalmente alto para la clase 0 (No sobrevivió), lo que significa que detecta aproximadamente el 97% de los casos en los que un pasajero no sobrevivió. El recall para la clase 1 (Sobrevivió) también es alto, alrededor del 90%.</h6> |
-| <h5>F1-Score</h5> | <h4>0 -> 0.95, 1 -> 0.92</h4> | <h6>El F1-Score es alto tanto para la clase 0 como para la clase 1, lo que sugiere un excelente equilibrio entre precisión y capacidad del modelo para detectar correctamente los casos positivos.</h6> |
+| <h5>Precisión</h5> | <h4>0 -> 0.94 <br> 1 -> 0.95</h4> | <h6>El modelo de Random Forest tiene una alta precisión tanto para la clase 0 (No sobrevivió) como para la clase 1 (Sobrevivió). Esto significa que cuando el modelo predice que un pasajero no sobrevivió, acierta aproximadamente el 94% de las veces, y cuando predice que un pasajero sobrevivió, acierta aproximadamente el 95% de las veces.</h6> |
+| <h5>Recall</h5> | <h4>0 -> 0.97 <br> 1 -> 0.90</h4> | <h6>En este caso, el modelo tiene un recall excepcionalmente alto para la clase 0 (No sobrevivió), lo que significa que detecta aproximadamente el 97% de los casos en los que un pasajero no sobrevivió. El recall para la clase 1 (Sobrevivió) también es alto, alrededor del 90%.</h6> |
+| <h5>F1-Score</h5> | <h4>0 -> 0.95 <br> 1 -> 0.92</h4> | <h6>El F1-Score es alto tanto para la clase 0 como para la clase 1, lo que sugiere un excelente equilibrio entre precisión y capacidad del modelo para detectar correctamente los casos positivos.</h6> |
 | <h5>Accuracy</h5> | <h4>0.94</h4> | <h6>El modelo de Random Forest tiene una alta exactitud global del 94%, lo que significa que acierta aproximadamente el 94% de las predicciones en todo el conjunto de datos.</h6> |
 
 - **Con base en estas métricas, determinar el mejor clasificador y justificar la elección.**

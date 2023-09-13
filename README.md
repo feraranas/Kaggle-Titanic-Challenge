@@ -252,6 +252,17 @@ En resumen, concluímos que es importante entender que *existe un equilibrio ent
 | <h5>F1-Score</h5> | <h4>0 -> 0.85</h4><br><h4>1 -> 0.74</h4> | <h6>El F1-Score es una métrica que combina precisión y recall en una sola medida. Es útil cuando se busca un equilibrio entre la precisión y la capacidad del modelo para detectar correctamente los casos positivos. En este caso, el F1-Score para la clase 0 es alto, lo que indica un buen equilibrio entre precisión y recall para la clase 0. Para la clase 1, el F1-Score es un poco más bajo, lo que sugiere que podría haber margen para mejorar el equilibrio entre precisión y recall en esta clase.</h6> |
 | <h5>Accuracy</h5> | <h4>0.81</h4> | <h6>La exactitud mide la proporción de predicciones correctas en relación con el total de predicciones en general. En este caso, el modelo tiene una exactitud global del 81%, lo que significa que acierta aproximadamente el 81% de las predicciones en todo el conjunto de datos. Sin embargo, la exactitud por sí sola sabemos que es engañosa ya que si no hubieramos equilibrado nuestras clases, el modelo podría predecir siempre la clase mayoritaria con mayor exactitud.</h6> |
 
+<br>
+<h5>ROC curve and AUC score</h5>
+
+![log_reg_ROC](./assets/log_reg_ROC.png)
+
+- **AUC Score**: **0.84**
+
+<h5>Confusion Matrix</h5>
+
+![log_reg_CM](./assets/log_reg_CM.png)
+
 <h4>K Nearest Neighbors</h4>
 
 | <h4>Métrica</h4> | <h4>Resultado </h4> | <h4>Explicación</h4> |
@@ -260,6 +271,17 @@ En resumen, concluímos que es importante entender que *existe un equilibrio ent
 | <h5>Recall</h5> | <h4>0 -> 0.92</h4><br><h4>1 -> 0.69</h4> | <h6>El modelo tiene un recall alto para la clase 0 (No sobrevivió), lo que significa que detecta aproximadamente el 92% de los casos en los que un pasajero no sobrevivió. Sin embargo, el recall para la clase 1 (Sobrevivió) es más bajo, alrededor del 69%.</h6> |
 | <h5>F1-Score</h5> | <h4>0 -> 0.87</h4><br><h4>1 -> 0.76</h4> | <h6>El F1-Score es más alto para la clase 0 que para la clase 1, lo que sugiere un mejor equilibrio entre precisión y capacidad del modelo para detectar correctamente los casos positivos en la clase 0. Es decir, mejor acierta correctamente y es sensible ante la clase 'no-sobrevivió'.</h6> |
 | <h5>Accuracy</h5> | <h4>0.83</h4> | <h6>El modelo de KNN tiene una exactitud global del 83%, lo que significa que acierta aproximadamente el 83% de las predicciones en todo el conjunto de datos.</h6> |
+
+<br>
+<h5>ROC curve and AUC score</h5>
+
+![knn_ROC](./assets/knn_ROC.png)
+
+- **AUC Score**: **0.84**
+
+<h5>Confusion Matrix</h5>
+
+![knn_CM](./assets/knn_CM.png)
 
 <h4>Support Vector Machine</h4>
 
@@ -270,6 +292,13 @@ En resumen, concluímos que es importante entender que *existe un equilibrio ent
 | <h5>F1-Score</h5> | <h4>0 -> 0.87</h4><br><h4>1 -> 0.77</h4> | <h6>El F1-Score es más alto para la clase 0 que para la clase 1, lo que sugiere un mejor equilibrio entre precisión y capacidad del modelo para detectar correctamente los casos positivos en la clase 0.</h6> |
 | <h5>Accuracy</h5> | <h4>0.84</h4> | <h6>En este caso, el modelo de SVM tiene una exactitud global del 84%, lo que significa que acierta aproximadamente el 84% de las predicciones en todo el conjunto de datos.</h6> |
 
+<br>
+<h5>ROC curve and AUC score</h5>
+
+![svm_ROC](./assets/svm_ROC.png)
+
+- **AUC Score**: **0.86**
+
 <h4>Random Forest Classifier</h4>
 
 | <h4>Métrica</h4> | <h4>Resultado </h4> | <h4>Explicación</h4> |
@@ -278,6 +307,17 @@ En resumen, concluímos que es importante entender que *existe un equilibrio ent
 | <h5>Recall</h5> | <h4>0 -> 0.97</h4><br><h4>1 -> 0.90</h4> | <h6>En este caso, el modelo tiene un recall excepcionalmente alto para la clase 0 (No sobrevivió), lo que significa que detecta aproximadamente el 97% de los casos en los que un pasajero no sobrevivió. El recall para la clase 1 (Sobrevivió) también es alto, alrededor del 90%.</h6> |
 | <h5>F1-Score</h5> | <h4>0 -> 0.95</h4><br><h4>1 -> 0.92</h4> | <h6>El F1-Score es alto tanto para la clase 0 como para la clase 1, lo que sugiere un excelente equilibrio entre precisión y capacidad del modelo para detectar correctamente los casos positivos.</h6> |
 | <h5>Accuracy</h5> | <h4>0.94</h4> | <h6>El modelo de Random Forest tiene una alta exactitud global del 94%, lo que significa que acierta aproximadamente el 94% de las predicciones en todo el conjunto de datos.</h6> |
+
+<br>
+<h5>ROC curve and AUC score</h5>
+
+![rf_ROC](./assets/rf_ROC.png)
+
+- **AUC Score**: **0.93**
+
+<h5>Confusion Matrix</h5>
+
+![rf_CM](./assets/rf_CM.png)
 
 - **Con base en estas métricas, determinar el mejor clasificador y justificar la elección.**
 

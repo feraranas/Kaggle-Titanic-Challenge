@@ -36,7 +36,6 @@ Los atributos categóricos son:
 | <h6>Cabin</h6> | <h6>Cabin number</h6> |
 | <h6>Embarked</h6> | <h6>Port of Embarkation => C = Cherbourg, Q = Queenstown, S = Southampton</h6> |
 
-<br>
 <h4>Atributo 'Sex'</h4><br>
 Porcentage of male ( 577 ):  64.76 %<br>
 Porcentage of female ( 314 ):  35.24 %<br>
@@ -70,21 +69,18 @@ Los atributos númericos son:
 | <h6>Parch</h6> | <h6># of parents / children aboard the Titanic</h6> |
 | <h6>Fare</h6> | <h6>Passenger fare</h6> |
 
-
 <h4>Atributo 'Age'</h4>
 Under age ( 139 ):	     0 - 18 years old	Not-Survived:  49.64 %		Survived: 50.36 %<br>
 Young adults ( 270 ):	19 - 30 years old	Not-Survived:  64.44 %		Survived: 35.56 %<br>
 Adults ( 241 ):		30 - 50 years old	Not-Survived:  57.68 %		Survived: 42.32 %<br>
 Elderly ( 64 ):		50+ years old		Not-Survived:  65.62 %		Survived: 34.38 %<br>
-![AgeRatio](./assets/age_ratio.png)<br>
 
-
-
+![AgeRatio](./assets/age_ratio.png)
 
 ### b. Datos faltantes:
 
 - **Identificar y visualizar los datos faltantes.**
-<br>
+
 Pclass has 0 missing values<br>
 Name has 0 missing values<br>
 Sex has 0 missing values<br>
@@ -96,6 +92,7 @@ Fare has 0 missing values<br>
 Cabin has 687 missing values<br>
 Embarked has 2 missing values<br>
 Survived has 0 missing values<br>
+
 ![Faltantes](./assets/datos_faltantes.png)
 
 - **Decidir qué características requieren imputaciones y cuáles no. Justificar la decisión y eliminar las columnas no seleccionadas.**
@@ -119,20 +116,19 @@ Para los valores categóricos usamos:<br>
 
 Usamos la mediana porque es una medida de tendencia central robusta que no se ve afectada por valores extremos o atípicos. En el caso de "Age", podría haber valores atípicos que afecten la media, es por eso que la mediana fue nuestra elección más robusta para imputar los valores faltantes.
 
-Observamos que la distribución de "Age" es asimétrica pero *NO* contiene valores atípicos significativos. Aun así, creímos preferible utilizar la mediana para evitar la influencia de estos valores atípicos en la imputación. Además, dicha asimetría no es muy significativa, dado que la desviación estándar es de 14. A continuación presentamos una gráfica que refleja la distribución de esta categoria numérica:<br>
-![AgeDistribution](./assets/age_dist.png)<br><br>
+Observamos que la distribución de "Age" es asimétrica pero *NO* contiene valores atípicos significativos. Aun así, creímos preferible utilizar la mediana para evitar la influencia de estos valores atípicos en la imputación. Además, dicha asimetría no es muy significativa, dado que la desviación estándar es de 14. A continuación presentamos una gráfica que refleja la distribución de esta categoria numérica:
+
+![AgeDistribution](./assets/age_dist.png)
 
 Por otro lado, para la categoría 'Embarked' únicamente imputamos 2 valores. Decidimos usar la estrategia de reemplazo por el valor **más frecuente** también conocida como la **moda**, está decisión se tomó para seguir la tendencia central y dar una distribución concisa a la categoría.<br>
-
-
-
 
 ### c. Análisis de correlación:
 
 - **Realizar un análisis de correlación para decidir qué características deben mantenerse y cuáles descartarse.**
 
-El resultado del análisis de correlación dio la siguiente figura:<br>
-![Correlacion](./assets/corr.png)<br>
+El resultado del análisis de correlación dio la siguiente figura:
+
+![Correlacion](./assets/corr.png)
 
 Con base en esta figura vemos que el rango de valores va de -1 a 1. *-1* indica que hay una fuerte correlación **negativa**. *0* nos indica que no hay correlación. *1* nos indica que hay una fuerte correlación **positiva**.
 
@@ -197,7 +193,8 @@ En resumen, la codificación one-hot es una opción segura y ampliamente utiliza
 
 - **Elegir tres algoritmos de clasificación que se utilizarán en el proyecto. Justificar la selección de cada algoritmo.**
 
-Usamos los siguientes 4 modelos de clasificación:<br>
+Usamos los siguientes 4 modelos de clasificación:
+
 | <h4>Modelo</h4> | <h4>Breve descripción</h4> |
 | ---|---|
 | <h6>Logistic Regression</h6> | <h6></h6> |

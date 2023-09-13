@@ -172,10 +172,12 @@ Con base en esta figura vemos que el rango de valores va de -1 a 1. *-1* indica 
 
 - **Convertir los datos categóricos en numéricos. Explorar diferentes métodos y seleccionar el más adecuado. Justificar la elección.**
 
-Para la transformación de los datos usamos el siguiente codificador:<br>
+Para la transformación de los datos usamos el siguiente codificador:
+<br><br>
 ```from sklearn.preprocessing import OneHotEncoder```
+<br><br>
 ```onehot = OneHotEncoder(handle_unknown="ignore")```
-
+<br><br>
 La elección de codificación estuvo entre **OneHotEncoder** y **Codificación por enteros** (por ejemplo, [0, 1, 2]) para variables categóricas. Tomamos nuestra decisión basándonos en los modelos que ibamos a usar, concluímos que la mejor estrategia sería usar *OneHotEncoder*
 
 **1. Regresión Logística:**: Usualmente, la codificación one-hot es una mejor opción para la regresión logística. Esto se debe a que la regresión logística no asume ninguna relación ordinal inherente entre las categorías, y la codificación one-hot garantiza que cada categoría se trate como una característica binaria separada.

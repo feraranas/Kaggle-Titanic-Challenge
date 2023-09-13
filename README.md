@@ -13,7 +13,7 @@
 
 El objetivo de este proyecto es resolver el problema Titanic - Machine Learning from Disaster de Kaggle Competition utilizando algoritmos de clasificación. Para ello, se seguirán las siguientes etapas:
 
-## 1. Exploración y preprocesamiento de los datos:
+## 1. Exploración y preprocesamiento de los datos
 
 ### a. Distribuciones:
 
@@ -79,7 +79,7 @@ Elderly ( 64 ):		50+ years old		Not-Survived:  65.62 %		Survived: 34.38 %<br>
 
 ![AgeRatio](./assets/age_ratio.png)
 
-### b. Datos faltantes:
+### b. Datos faltantes
 
 - **Identificar y visualizar los datos faltantes.**
 
@@ -129,7 +129,7 @@ Observamos que la distribución de "Age" es asimétrica pero *NO* contiene valor
 
 Por otro lado, para la categoría 'Embarked' únicamente imputamos 2 valores. Decidimos usar la estrategia de reemplazo por el valor **más frecuente** también conocida como la **moda**, está decisión se tomó para seguir la tendencia central y dar una distribución concisa a la categoría.<br>
 
-### c. Análisis de correlación:
+### c. Análisis de correlación
 
 - **Realizar un análisis de correlación para decidir qué características deben mantenerse y cuáles descartarse.**
 
@@ -168,7 +168,7 @@ Con base en esta figura vemos que el rango de valores va de -1 a 1. *-1* indica 
 8. **Embarked**:
    - No tiene correlaciones fuertes pero decidimos quedarnoslo como una versión de prueba. Sin embargo, también optamos por eliminarlo para probar nuestros modelos en una segunda iteración.
 
-### d. Transformación de datos:
+### d. Transformación de datos
 
 - **Convertir los datos categóricos en numéricos. Explorar diferentes métodos y seleccionar el más adecuado. Justificar la elección.**
 
@@ -198,9 +198,9 @@ La elección de codificación estuvo entre **OneHotEncoder** y **Codificación p
 
 En resumen, nosotros usamos codificación one-hot por ser la opción más segura y, como resultado de nuestra investigación, vimos que es la más ampliamente utilizada para la mayoría de los algoritmos de aprendizaje automático, ya que garantiza que cada categoría se trate como una característica separada, dejando claro que no existe una relación ordinal inherente.
 
-## 2. Clasificación:
+## 2. Clasificación
 
-### a. Selección de clasificadores:
+### a. Selección de clasificadores
 
 - **Elegir tres algoritmos de clasificación que se utilizarán en el proyecto. Justificar la selección de cada algoritmo.**
 
@@ -213,7 +213,7 @@ Usamos los siguientes 4 modelos de clasificación:
 | <h6>Support Vector Machine</h6> | <h6>Fue adecuado para separar clases en espacios de alta dimensión y también resultó el más eficaz en la clasificación binaria. Demostró ser capaz de manejar de manera efectiva características no lineales. Además, como vimos, fue útil ya que existían fronteras de decisión complejas entre las clases.</h6> |
 | <h6>Random Forest Classifier</h6> | <h6>Es robusto y versátil. Nos ayudó a manejar características irrelevantes, manejar conjuntos de datos desequilibrados y nos proporcionó una buena estimación de la importancia de las características. Además, tiende a reducir el sobreajuste.</h6> |
 
-### b. Train-test-validate split:
+### b. Train-test-validate split
 
 - **Utilizar k-cross validation para realizar la clasificación. Seleccionar el valor de "k" y justificar la elección.**
 
@@ -239,11 +239,11 @@ En resumen, concluímos que es importante entender que *existe un equilibrio ent
 | <h5>Random Forest Classifier</h5> | Cross validation scores Random Forest: [*0.70731707*, *0.65853659*, *0.825*, *0.85*, *0.775*, *0.75*, *0.775*, *0.725*, *0.85*, *0.85*, *0.825*, *0.9*, *0.775*, *0.85*, *0.8*]<br><br>Random Forest Mean accuracy **0.79** |
 
 
-### c. Métricas de evaluación:
+### c. Métricas de evaluación
 
 - **Calcular la exactitud, precisión, matriz de confusión, curva ROC y AUC. Explicar cada una de estas métricas.**
 
-<h4>Logistic Regression</h4>
+<h1>Logistic Regression</h1>
 
 | <h4>Métrica</h4> | <h4>Resultado </h4> | <h4>Explicación</h4> |
 | ---|---|---|
@@ -257,13 +257,26 @@ En resumen, concluímos que es importante entender que *existe un equilibrio ent
 
 ![log_reg_ROC](./assets/log_reg_ROC.png)
 
+<br>
+
+   - La Curva ROC es una representación gráfica que usamos para evaluar el rendimiento de nuestros modelos de clasificación. Se representa la tasa de verdaderos positivos (Recall) en el eje vertical y la tasa de falsos positivos en el eje horizontal a medida que se varía el umbral de decisión del modelo.
+   - En el eje vertical (Recall), mostramos la capacidad del modelo para detectar correctamente los casos positivos en función de diferentes umbrales de probabilidad. Cuanto más alto vemos el punto en la Curva ROC, mejor será es el modelo en la identificación de verdaderos positivos.
+   - En el eje horizontal, se muestra la tasa de falsos positivos, que representa la proporción de casos negativos incorrectamente clasificados como positivos en función de diferentes umbrales de probabilidad. Consideramos que tenemos un buen modelo puesto que tenemos una tasa de falsos positivos baja incluso a altos niveles de Recall.
+
 - **AUC Score**: **0.84**
+
+   - Nuestro resultado es 0.84, lo que es bastante positivo. Un AUC de 0.84 sugiere que el modelo de Regresión Logística tiene una buena capacidad de discriminación. Es decir, es efectivo para distinguir entre las dos clases en tu problema de clasificación (supervivientes y no supervivientes).
 
 <h5>Confusion Matrix</h5>
 
 ![log_reg_CM](./assets/log_reg_CM.png)
 
-<h4>K Nearest Neighbors</h4>
+   - Verdaderos Positivos (True Positives, TP): Son los casos en los nuestro modelo predijo correctamente la clase positiva. Tenemos 261 verdaderos positivos.
+   - Falsos Negativos (False Negatives, FN): Son los casos en los que nuestro modelo predijo incorrectamente la clase negativa cuando la verdadera clase era positiva. Tenemos 40 falsos negativos.
+   - Falsos Positivos (False Positives, FP): Son los casos en los que nuestro modelo predijo incorrectamente la clase positiva cuando la verdadera clase era negativa. Tenemos 46 falsos positivos.
+   - Verdaderos Negativos (True Negatives, TN): Son los casos en los que nuestro modelo predijo correctamente la clase negativa. Tenemos 255 verdaderos negativos.
+
+<h1>K Nearest Neighbors</h1>
 
 | <h4>Métrica</h4> | <h4>Resultado </h4> | <h4>Explicación</h4> |
 | ---|---|---|
@@ -273,17 +286,25 @@ En resumen, concluímos que es importante entender que *existe un equilibrio ent
 | <h5>Accuracy</h5> | <h4>0.83</h4> | <h6>El modelo de KNN tiene una exactitud global del 83%, lo que significa que acierta aproximadamente el 83% de las predicciones en todo el conjunto de datos.</h6> |
 
 <br>
+
 <h5>ROC curve and AUC score</h5>
 
 ![knn_ROC](./assets/knn_ROC.png)
 
 - **AUC Score**: **0.84**
 
+   - El valor AUC resume el rendimiento global del modelo KNN utilizando la Curva ROC. Un AUC de 0.84 nos indica que nuestro modelo de KNN también una buena capacidad de discriminación. Al igual que con LogReg, es efectivo para distinguir entre los pasajeros que sobrevivieron y los que no. Sin embargo, podemos tunear hiperparámetros para volver más alto el punto en la Curva ROC.
+
 <h5>Confusion Matrix</h5>
+
+   - Verdaderos Positivos (True Positives, TP): Son los casos en los nuestro modelo predijo correctamente la clase positiva. Tenemos 266 verdaderos positivos.
+   - Falsos Negativos (False Negatives, FN): Son los casos en los que nuestro modelo predijo incorrectamente la clase negativa cuando la verdadera clase era positiva. Tenemos 35 falsos negativos.
+   - Falsos Positivos (False Positives, FP): Son los casos en los que nuestro modelo predijo incorrectamente la clase positiva cuando la verdadera clase era negativa. Tenemos 87 falsos positivos.
+   - Verdaderos Negativos (True Negatives, TN): Son los casos en los que nuestro modelo predijo correctamente la clase negativa. Tenemos 214 verdaderos negativos.
 
 ![knn_CM](./assets/knn_CM.png)
 
-<h4>Support Vector Machine</h4>
+<h1>Support Vector Machine</h1>
 
 | <h4>Métrica</h4> | <h4>Resultado </h4> | <h4>Explicación</h4> |
 | ---|---|---|
@@ -293,13 +314,16 @@ En resumen, concluímos que es importante entender que *existe un equilibrio ent
 | <h5>Accuracy</h5> | <h4>0.84</h4> | <h6>En este caso, el modelo de SVM tiene una exactitud global del 84%, lo que significa que acierta aproximadamente el 84% de las predicciones en todo el conjunto de datos.</h6> |
 
 <br>
+
 <h5>ROC curve and AUC score</h5>
 
 ![svm_ROC](./assets/svm_ROC.png)
 
 - **AUC Score**: **0.86**
 
-<h4>Random Forest Classifier</h4>
+   - Tenemos un AUC de 0.86 lo cuál es muy positivo y nos sugiere que el modelo de SVM tiene una muy buena capacidad de discriminación. Es un modelo sólido al igual que los 2 previos.
+
+<h1>Random Forest Classifier</h1>
 
 | <h4>Métrica</h4> | <h4>Resultado </h4> | <h4>Explicación</h4> |
 | ---|---|---|
@@ -315,12 +339,19 @@ En resumen, concluímos que es importante entender que *existe un equilibrio ent
 
 - **AUC Score**: **0.93**
 
+   -  El resultado AUC de 0.93 es excepcionalmente alto, en comparación con nuestros otros 3 modelos. Esto nos sugiere que el modelo de Random Forest Classifier tiene una mayor capacidad de discriminación. En otras palabras, es el más altamente efectivo para distinguir entre los pasajeros que sobrevivieron y los que no.
+
 <h5>Confusion Matrix</h5>
 
 ![rf_CM](./assets/rf_CM.png)
 
+   - Verdaderos Positivos (True Positives, TP): Son los casos en los nuestro modelo predijo correctamente la clase positiva. Tenemos 255 verdaderos positivos.
+   - Falsos Negativos (False Negatives, FN): Son los casos en los que nuestro modelo predijo incorrectamente la clase negativa cuando la verdadera clase era positiva. Tenemos 46 falsos negativos.
+   - Falsos Positivos (False Positives, FP): Son los casos en los que nuestro modelo predijo incorrectamente la clase positiva cuando la verdadera clase era negativa. Tenemos 40 falsos positivos.
+   - Verdaderos Negativos (True Negatives, TN): Son los casos en los que nuestro modelo predijo correctamente la clase negativa. Tenemos 261 verdaderos negativos.
+
 - **Con base en estas métricas, determinar el mejor clasificador y justificar la elección.**
 
-El mejor clasificador fue: **A**
+El mejor clasificador fue: **Random Forest Classifier**. El motivo es dado los resultados de las métricas. Todo demuestra un mejor desempeño por parte de Random Forest que por parte de Logistic Regression, Support Vector Machine o K Nearest Neighbors.
 
 ![Titanic](./assets/titanic.png)

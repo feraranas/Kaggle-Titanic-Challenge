@@ -233,10 +233,10 @@ En resumen, concluímos que es importante entender que *existe un equilibrio ent
 
 | <h4>K-Cross Validation p/modelo</h4> | <h4>Resultados</h4> |
 | ---|---|
-| <h5>Logistic Regression</h5> | <h5>Cross-validation scores: [*0.75609756* *0.58536585* *0.775* *0.725* *0.825* *0.625* *0.775* *0.775* *0.825* *0.875* *0.725* *0.75* *0.825* *0.825* *0.775*]</h5> |
-| <h5>K Nearest Neighbors</h5> | <h5>[]</h5> |
-| <h5>Support Vector Machine</h5> | <h5>[]</h5> |
-| <h5>Random Forest Classifier</h5> | <h5>[]</h5> |
+| <h5>Logistic Regression</h5> | Cross-validation scores: [*0.75609756*, *0.58536585*, *0.775*, *0.725*, *0.825*, *0.625*, *0.775*, *0.775*, *0.825*, *0.875*, *0.725*, *0.75*, *0.825*, *0.825*, *0.775*]<br>Logistic Regression Mean Accuracy: **0.76** |
+| <h5>K Nearest Neighbors</h5> | KNN Cross-validation scores [*0.70731707*, *0.6097561*, *0.775*, *0.775*, *0.825*, *0.775*, *0.75*, *0.775*, *0.8*, *0.75*, *0.775*, *0.825*, *0.8*, *0.8*, *0.725*]<br>KNN Mean Accuracy: **0.76** |
+| <h5>Support Vector Machine</h5> | Cross validation scores [*0.70731707*, *0.65853659*, *0.75*, *0.8*, *0.825*, *0.7*, *0.85*, *0.8*, *0.775*, *0.85*, *0.75*, *0.825*, *0.825*, *0.825*, *0.775*]<br>Mean Accuracy: **0.78** |
+| <h5>Random Forest Classifier</h5> | Cross validation scores Random Forest: [*0.70731707*, *0.65853659*, *0.825*, *0.85*, *0.775*, *0.75*, *0.775*, *0.725*, *0.85*, *0.85*, *0.825*, *0.9*, *0.775*, *0.85*, *0.8*]<br>Mean accuracy **0.7943902439024391** |
 
 
 ### c. Métricas de evaluación:

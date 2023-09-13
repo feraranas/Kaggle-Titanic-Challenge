@@ -1,5 +1,6 @@
 # Kaggle Titanic Challenge
 #### Link a colab: https://drive.google.com/file/d/1OGadn6KctRUchMRE9_b9aNZGQQaCxi-1/view?usp=sharing
+
 ## **Equipo 4**:
 | <h4>Alumno</h4> | <h4>Matricula</h4> |
 | ---|---|
@@ -43,7 +44,8 @@ Porcentage of male surviving:  18.89 %<br>
 Porcentage of male not surviving:  81.11 %<br>
 Porcentage of female surviving:  74.2 %<br>
 Porcentage of female not surviving:  25.8 %<br>
-![SexRatio](./assets/sex_ratio.png)<br>
+
+![SexRatio](./assets/sex_ratio.png)
 
 <h4>Atributo 'Embarked'</h4><br>
 Porcentage of embark in C = Cherbourg ( 168 ): 18.86 %		Not-Survived:  44.64 %		Survived: 55.36 %<br>
@@ -56,7 +58,8 @@ Hemos decidido no utilizar los atributos **'Name'**, **'Ticket'** y **'Cabin'**.
 
 
 - **Comprender la distribución de los datos numéricos y determinar si es necesario aplicar procesos de normalización o estandarización.**
-Los atributos númericos son:<br>
+Los atributos númericos son:
+
 | <h5>Atributo</h5> | <h5>Descripción</h5> |
 | ---|---|
 | <h6>PassengerId</h6> | <h6>Passenger Id</h6> |
@@ -66,7 +69,8 @@ Los atributos númericos son:<br>
 | <h6>SibSp</h6> | <h6># of siblings / spouses aboard the Titanic</h6> |
 | <h6>Parch</h6> | <h6># of parents / children aboard the Titanic</h6> |
 | <h6>Fare</h6> | <h6>Passenger fare</h6> |
-<br>
+
+
 <h4>Atributo 'Age'</h4>
 Under age ( 139 ):	     0 - 18 years old	Not-Survived:  49.64 %		Survived: 50.36 %<br>
 Young adults ( 270 ):	19 - 30 years old	Not-Survived:  64.44 %		Survived: 35.56 %<br>

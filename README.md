@@ -220,9 +220,24 @@ Usamos los siguientes 4 modelos de clasificación:
 La elección del valor de "k" en k-cross validation es un proceso importante ya que influyó en la evaluación del rendimiento de nuestros modelos. La justificación para seleccionar un valor particular de "k" dependió de varios factores, incluidos el tamaño del dataset y nuestros objetivos.<br>
 
    - Dado que tenemos un conjunto de datos pequeño, usamos un valor alto de "k" para aprovechar al máximo nuestros datos y obtener una estimación más estable del rendimiento.
+        - Esto significa que estamos promediando el rendimiento del modelo sobre más particiones diferentes de nuestros datos. Como resultado, las estimaciones de rendimiento fueron más estables, es decir, menos sensibles a pequeñas variaciones en los datos de entrenamiento y prueba.
    - Dado lo anterior, estuvimos dispuestos a obtener la estimación más precisa del rendimiento de nuestros modelos. Es por eso que seleccionamos k=15. Aún cuando esto implico sacrificar un poco de velocidad de cálculo.
    - Dado el punto anterior, un valor más alto de "k" significa que realizamos más divisiones del conjunto de datos y, por lo tanto, requerimos más tiempo de cómputo.
    - Sabemos que **k** afecta nuestras estimaciones de rendimiento. Aunque el valor "k = 15 [considerado alto]" nos proporcionó estimaciones de rendimiento más estables, esto fue expensas de una mayor varianza.
+        - Esto quiere decir que este aumento en la estabilidad tiene un costo potencial. Cuanto mayor era nuestro valor de "k," más pequeños fueron los conjuntos de entrenamiento en cada iteración de la validación cruzada. Con conjuntos de entrenamiento más pequeños, es posible que los modelo no capturaran todas las variaciones y patrones presentes en los datos. Esto llevó a una mayor variabilidad en las estimaciones de rendimiento **[como se mostrará a continuación]**: esto significa que las métricas varian más entre las diferentes divisiones de los datos.
+<br>
+
+En resumen, concluímos que es importante entender que *existe un equilibrio entre la estabilidad y la capacidad de generalización de nuestros modelo*.
+
+<br>
+
+| <h4>K-Cross Validation p/modelo</h4> | <h4>Resultados</h4> |
+| ---|---|
+| <h5>Logistic Regression</h5> | <h5>Cross-validation scores: [*0.75609756* *0.58536585* *0.775* *0.725* *0.825* *0.625* *0.775* *0.775* *0.825* *0.875* *0.725* *0.75* *0.825* *0.825* *0.775*]</h5> |
+| <h5>K Nearest Neighbors</h5> | <h5>[]</h5> |
+| <h5>Support Vector Machine</h5> | <h5>[]</h5> |
+| <h5>Random Forest Classifier</h5> | <h5>[]</h5> |
+
 
 ### c. Métricas de evaluación:
 

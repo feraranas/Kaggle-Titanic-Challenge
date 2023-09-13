@@ -57,7 +57,8 @@ Hemos decidido no utilizar los atributos **'Name'**, **'Ticket'** y **'Cabin'**.
 
 
 - **Comprender la distribución de los datos numéricos y determinar si es necesario aplicar procesos de normalización o estandarización.**
-<br>
+
+
 Los atributos númericos son:
 
 | <h5>Atributo</h5> | <h5>Descripción</h5> |

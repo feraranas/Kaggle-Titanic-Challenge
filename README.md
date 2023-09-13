@@ -49,7 +49,8 @@ Porcentage of female not surviving:  25.8 %<br>
 Porcentage of embark in C = Cherbourg ( 168 ): 18.86 %		Not-Survived:  44.64 %		Survived: 55.36 %<br>
 Porcentage of embark in Q = Queenstown ( 77 ):  8.64 %		Not-Survived:  61.04 %		Survived: 38.96 %<br>
 Porcentage of embark in S = Southampton ( 644 ):  72.28 %	Not-Survived:  66.3 %		Survived: 33.7 %<br>
-![EmbarkedRatio](./assets/embarked_ratio.png)<br>
+
+![EmbarkedRatio](./assets/embarked_ratio.png)
 
 Hemos decidido no utilizar los atributos **'Name'**, **'Ticket'** y **'Cabin'**. Creemos que no aportan una mejora significativa en nuestras predicciones. De hecho, probamos extraer los prefijos *Mr*, *Miss*, *Don*, *Lady*, para analizar si había alguna relación con *'sobrevivir'* o *'no sobrevivir'* pero nos dimos cuenta que dichos prefijos están estrechamente ligados al *'sexo'* de una persona. Es decir, aquellos que tienen prefijos masculinos son hombres y viceversa.<br>
 

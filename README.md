@@ -180,7 +180,9 @@ Para la transformación de los datos usamos el siguiente codificador:
 <br><br>
 La elección de codificación estuvo entre **OneHotEncoder** y **Codificación por enteros** (por ejemplo, [0, 1, 2]) para variables categóricas. Tomamos nuestra decisión basándonos en los modelos que ibamos a usar, concluímos que la mejor estrategia sería usar *OneHotEncoder*
 
-**1. Regresión Logística:**: Usualmente, la codificación one-hot es una mejor opción para la regresión logística. Esto se debe a que la regresión logística no asume ninguna relación ordinal inherente entre las categorías, y la codificación one-hot garantiza que cada categoría se trate como una característica binaria separada.
+**1. Regresión Logística:** 
+
+   - **Elección de Codificación:** Usualmente, la codificación one-hot es una mejor opción para la regresión logística. Esto se debe a que la regresión logística no asume ninguna relación ordinal inherente entre las categorías, y la codificación one-hot garantiza que cada categoría se trate como una característica binaria separada.
 
 **2. Clasificador de Bosque Aleatorio (Random Forest):**
 

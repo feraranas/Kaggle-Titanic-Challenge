@@ -217,6 +217,13 @@ Usamos los siguientes 4 modelos de clasificación:
 
 - **Utilizar k-cross validation para realizar la clasificación. Seleccionar el valor de "k" y justificar la elección.**
 
+La elección del valor de "k" en k-cross validation es un proceso importante ya que influyó en la evaluación del rendimiento de nuestros modelos. La justificación para seleccionar un valor particular de "k" dependió de varios factores, incluidos el tamaño del dataset y nuestros objetivos.<br>
+
+   - Dado que tenemos un conjunto de datos pequeño, usamos un valor alto de "k" para aprovechar al máximo nuestros datos y obtener una estimación más estable del rendimiento.
+   - Dado lo anterior, estuvimos dispuestos a obtener la estimación más precisa del rendimiento de nuestros modelos. Es por eso que seleccionamos k=15. Aún cuando esto implico sacrificar un poco de velocidad de cálculo.
+   - Dado el punto anterior, un valor más alto de "k" significa que realizamos más divisiones del conjunto de datos y, por lo tanto, requerimos más tiempo de cómputo.
+   - Sabemos que **k** afecta nuestras estimaciones de rendimiento. Aunque el valor "k = 15 [considerado alto]" nos proporcionó estimaciones de rendimiento más estables, esto fue expensas de una mayor varianza.
+
 ### c. Métricas de evaluación:
 
 - **Calcular la exactitud, precisión, matriz de confusión, curva ROC y AUC. Explicar cada una de estas métricas.**

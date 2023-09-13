@@ -1,4 +1,5 @@
 # Kaggle Titanic Challenge
+#### Link a colab: https://drive.google.com/file/d/1OGadn6KctRUchMRE9_b9aNZGQQaCxi-1/view?usp=sharing
 ## **Equipo 4**:
 | <h4>Alumno</h4> | <h4>Matricula</h4> |
 | ---|---|

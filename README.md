@@ -109,13 +109,18 @@ La decisión de qué características requieren imputaciones la tomamos bajo los
 
 - **Aplicar técnicas de imputación para los datos faltantes. Seleccionar la mejor técnica y justificar la elección.**
 
-Usamos la técnica incluída en scikit learn para realizar imputaciones.<br>
-```from sklearn.impute import SimpleImputer```<br>
-Para los valores numéricos usamos:<br>
+Usamos la técnica incluída en scikit learn para realizar imputaciones.
+<br><br>
+```from sklearn.impute import SimpleImputer```
+<br><br>
+Para los valores numéricos usamos:
+<br><br>
 ```imputer_num = SimpleImputer(strategy="median")```
-Para los valores categóricos usamos:<br>
+<br><br>
+Para los valores categóricos usamos:
+<br><br>
 ```"imputer_cat = SimpleImputer(strategy="most_frequent")```
-
+<br>
 Usamos la mediana porque es una medida de tendencia central robusta que no se ve afectada por valores extremos o atípicos. En el caso de "Age", podría haber valores atípicos que afecten la media, es por eso que la mediana fue nuestra elección más robusta para imputar los valores faltantes.
 
 Observamos que la distribución de "Age" es asimétrica pero *NO* contiene valores atípicos significativos. Aun así, creímos preferible utilizar la mediana para evitar la influencia de estos valores atípicos en la imputación. Además, dicha asimetría no es muy significativa, dado que la desviación estándar es de 14. A continuación presentamos una gráfica que refleja la distribución de esta categoria numérica:

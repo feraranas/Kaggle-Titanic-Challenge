@@ -25,7 +25,8 @@ Está verificación del equilibrio de clases es importante para nuestro análisi
 
 - **Analizar la distribución de los datos categóricos y su relación con la clase "survived". Comienza a identificar características relevantes para una clasificación precisa.**
 
-Los atributos categóricos son:<br>
+Los atributos categóricos son:
+
 | <h4>Atributo</h4> | <h4>Descripción</h4> |
 | ---|---|
 | <h6>Name</h6> | <h6>Name of passenger</h6> |
@@ -33,6 +34,7 @@ Los atributos categóricos son:<br>
 | <h6>Ticket</h6> | <h6>Ticket number</h6> |
 | <h6>Cabin</h6> | <h6>Cabin number</h6> |
 | <h6>Embarked</h6> | <h6>Port of Embarkation => C = Cherbourg, Q = Queenstown, S = Southampton</h6> |
+
 <br>
 <h4>Atributo 'Sex'</h4><br>
 Porcentage of male ( 577 ):  64.76 %<br>

@@ -178,7 +178,7 @@ Para la transformación de los datos usamos el siguiente codificador:
 <br><br>
 ```onehot = OneHotEncoder(handle_unknown="ignore")```
 <br><br>
-La elección de codificación estuvo entre **OneHotEncoder** y **Codificación por enteros** (por ejemplo, [0, 1, 2]) para variables categóricas. Tomamos nuestra decisión basándonos en los modelos que ibamos a usar, concluímos que la mejor estrategia sería usar *OneHotEncoder*
+La elección de codificación estuvo entre **OneHotEncoder** y **Codificación por enteros** (por ejemplo, [0, 1, 2]) para variables categóricas. Tomamos nuestra decisión basándonos en los modelos que ibamos a usar, concluímos que la mejor estrategia sería usar *OneHotEncoder*. Además, sabemos que cuando aplicamos una transformación, la regla que podemos usar cuando no hay ningún parámetro confiable en qué basarnos, es hacer una transformación de One-Hot en vez de *Codificación por enteros*.
 
 **1. Regresión Logística:** 
 
